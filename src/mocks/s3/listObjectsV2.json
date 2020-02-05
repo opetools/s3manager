@@ -1,0 +1,266 @@
+{
+  "cloudtrail-sample-bucket,": {
+    "IsTruncated": false,
+    "Contents": [],
+    "Name": "cloudtrail-sample-bucket",
+    "Prefix": "",
+    "Delimiter": "/",
+    "MaxKeys": 1000,
+    "CommonPrefixes": [
+      {
+        "Prefix": "AWSLogs/"
+      }
+    ],
+    "KeyCount": 1
+  },
+  "cloudtrail-sample-bucket,AWSLogs/": {
+    "IsTruncated": false,
+    "Contents": [],
+    "Name": "cloudtrail-sample-bucket",
+    "Prefix": "AWSLogs/",
+    "Delimiter": "/",
+    "MaxKeys": 1000,
+    "CommonPrefixes": [
+      {
+        "Prefix": "AWSLogs/169271423270/"
+      }
+    ],
+    "KeyCount": 1
+  },
+  "cloudtrail-sample-bucket,AWSLogs/169271423270/": {
+    "IsTruncated": false,
+    "Contents": [],
+    "Name": "cloudtrail-sample-bucket",
+    "Prefix": "AWSLogs/169271423270/",
+    "Delimiter": "/",
+    "MaxKeys": 1000,
+    "CommonPrefixes": [
+      {
+        "Prefix": "AWSLogs/169271423270/CloudTrail/"
+      }
+    ],
+    "KeyCount": 1
+  },
+  "cloudtrail-sample-bucket,AWSLogs/169271423270/CloudTrail/": {
+    "IsTruncated": false,
+    "Contents": [
+      {
+        "Key": "AWSLogs/169271423270/CloudTrail/",
+        "LastModified": "2020-01-12T01:46:00.000Z",
+        "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+        "Size": 0,
+        "StorageClass": "STANDARD"
+      }
+    ],
+    "Name": "cloudtrail-sample-bucket",
+    "Prefix": "AWSLogs/169271423270/CloudTrail/",
+    "Delimiter": "/",
+    "MaxKeys": 1000,
+    "CommonPrefixes": [
+      {
+        "Prefix": "AWSLogs/169271423270/CloudTrail/ap-northeast-1/"
+      },
+      {
+        "Prefix": "AWSLogs/169271423270/CloudTrail/us-east-1/"
+      }
+    ],
+    "KeyCount": 2
+  },
+  "cloudtrail-sample-bucket,AWSLogs/169271423270/CloudTrail/ap-northeast-1/": {
+    "IsTruncated": false,
+    "Contents": [],
+    "Name": "cloudtrail-sample-bucket",
+    "Prefix": "AWSLogs/169271423270/CloudTrail/ap-northeast-1/",
+    "Delimiter": "/",
+    "MaxKeys": 1000,
+    "CommonPrefixes": [
+      {
+        "Prefix": "AWSLogs/169271423270/CloudTrail/ap-northeast-1/2020/"
+      }
+    ],
+    "KeyCount": 1
+  },
+  "cloudtrail-sample-bucket,AWSLogs/169271423270/CloudTrail/ap-northeast-1/2020/": {
+    "IsTruncated": false,
+    "Contents": [],
+    "Name": "cloudtrail-sample-bucket",
+    "Prefix": "AWSLogs/169271423270/CloudTrail/ap-northeast-1/2020/",
+    "Delimiter": "/",
+    "MaxKeys": 1000,
+    "CommonPrefixes": [
+      {
+        "Prefix": "AWSLogs/169271423270/CloudTrail/ap-northeast-1/2020/01/"
+      }
+    ],
+    "KeyCount": 1
+  },
+  "cloudtrail-sample-bucket,AWSLogs/169271423270/CloudTrail/ap-northeast-1/2020/01/": {
+    "IsTruncated": false,
+    "Contents": [],
+    "Name": "cloudtrail-sample-bucket",
+    "Prefix": "AWSLogs/169271423270/CloudTrail/ap-northeast-1/2020/01/",
+    "Delimiter": "/",
+    "MaxKeys": 1000,
+    "CommonPrefixes": [
+      {
+        "Prefix": "AWSLogs/169271423270/CloudTrail/ap-northeast-1/2020/01/12/"
+      }
+    ],
+    "KeyCount": 1
+  },
+  "cloudtrail-sample-bucket,AWSLogs/169271423270/CloudTrail/ap-northeast-1/2020/01/12/": {
+    "IsTruncated": false,
+    "Contents": [
+      {
+        "Key": "AWSLogs/169271423270/CloudTrail/ap-northeast-1/2020/01/12/262431843559_CloudTrail_ap-northeast-1_20200112T0145Z_aSBmDzbdpKZmdLxG.json.gz",
+        "LastModified": "2020-01-12T01:51:14.000Z",
+        "ETag": "\"f0b71573eb8536ea994d41940e3c5ff9\"",
+        "Size": 1926,
+        "StorageClass": "STANDARD"
+      },
+      {
+        "Key": "AWSLogs/169271423270/CloudTrail/ap-northeast-1/2020/01/12/262431843559_CloudTrail_ap-northeast-1_20200112T0150Z_kuRSrvMRWOzsAaSS.json.gz",
+        "LastModified": "2020-01-12T01:56:00.000Z",
+        "ETag": "\"e66ffd674bc880981cea874d7547a444\"",
+        "Size": 14875,
+        "StorageClass": "STANDARD"
+      },
+      {
+        "Key": "AWSLogs/169271423270/CloudTrail/ap-northeast-1/2020/01/12/262431843559_CloudTrail_ap-northeast-1_20200112T0155Z_z3KZ7GFjjMw8vv2A.json.gz",
+        "LastModified": "2020-01-12T02:00:59.000Z",
+        "ETag": "\"18538638a43196a0ba931b9cb030ceec\"",
+        "Size": 12331,
+        "StorageClass": "STANDARD"
+      }
+    ],
+    "Name": "cloudtrail-sample-bucket",
+    "Prefix": "AWSLogs/169271423270/CloudTrail/ap-northeast-1/2020/01/12/",
+    "Delimiter": "/",
+    "MaxKeys": 1000,
+    "CommonPrefixes": [],
+    "KeyCount": 3
+  },
+  "cloudtrail-sample-bucket,AWSLogs/169271423270/CloudTrail/us-east-1/": {
+    "IsTruncated": false,
+    "Contents": [],
+    "Name": "cloudtrail-sample-bucket",
+    "Prefix": "AWSLogs/169271423270/CloudTrail/us-east-1/",
+    "Delimiter": "/",
+    "MaxKeys": 1000,
+    "CommonPrefixes": [
+      {
+        "Prefix": "AWSLogs/169271423270/CloudTrail/us-east-1/2020/"
+      }
+    ],
+    "KeyCount": 1
+  },
+  "cloudtrail-sample-bucket,AWSLogs/169271423270/CloudTrail/us-east-1/2020/": {
+    "IsTruncated": false,
+    "Contents": [],
+    "Name": "cloudtrail-sample-bucket",
+    "Prefix": "AWSLogs/169271423270/CloudTrail/us-east-1/2020/",
+    "Delimiter": "/",
+    "MaxKeys": 1000,
+    "CommonPrefixes": [
+      {
+        "Prefix": "AWSLogs/169271423270/CloudTrail/us-east-1/2020/01/"
+      }
+    ],
+    "KeyCount": 1
+  },
+  "cloudtrail-sample-bucket,AWSLogs/169271423270/CloudTrail/us-east-1/2020/01/": {
+    "IsTruncated": false,
+    "Contents": [],
+    "Name": "cloudtrail-sample-bucket",
+    "Prefix": "AWSLogs/169271423270/CloudTrail/us-east-1/2020/01/",
+    "Delimiter": "/",
+    "MaxKeys": 1000,
+    "CommonPrefixes": [
+      {
+        "Prefix": "AWSLogs/169271423270/CloudTrail/us-east-1/2020/01/12/"
+      }
+    ],
+    "KeyCount": 1
+  },
+  "cloudtrail-sample-bucket,AWSLogs/169271423270/CloudTrail/us-east-1/2020/01/12/": {
+    "IsTruncated": false,
+    "Contents": [
+      {
+        "Key": "AWSLogs/169271423270/CloudTrail/us-east-1/2020/01/12/262431843559_CloudTrail_us-east-1_20200112T0145Z_3GsWgmXJHaipJE3e.json.gz",
+        "LastModified": "2020-01-12T01:50:45.000Z",
+        "ETag": "\"1db401202a3bc485495790addc96417a\"",
+        "Size": 523,
+        "StorageClass": "STANDARD"
+      },
+      {
+        "Key": "AWSLogs/169271423270/CloudTrail/us-east-1/2020/01/12/262431843559_CloudTrail_us-east-1_20200112T0145Z_BQJOIXRr2BnOe365.json.gz",
+        "LastModified": "2020-01-12T01:56:38.000Z",
+        "ETag": "\"300e3954121ea8f7fddf5639749df74b\"",
+        "Size": 553,
+        "StorageClass": "STANDARD"
+      },
+      {
+        "Key": "AWSLogs/169271423270/CloudTrail/us-east-1/2020/01/12/262431843559_CloudTrail_us-east-1_20200112T0145Z_NEI3p2ssvbDB5ahw.json.gz",
+        "LastModified": "2020-01-12T01:51:17.000Z",
+        "ETag": "\"43c5a0f405e603aa8ddfcabf9307d9be\"",
+        "Size": 684,
+        "StorageClass": "STANDARD"
+      },
+      {
+        "Key": "AWSLogs/169271423270/CloudTrail/us-east-1/2020/01/12/262431843559_CloudTrail_us-east-1_20200112T0150Z_3kamRJeUagXdWCGA.json.gz",
+        "LastModified": "2020-01-12T02:02:14.000Z",
+        "ETag": "\"3f754768b175d6324d82760f5e2f6430\"",
+        "Size": 554,
+        "StorageClass": "STANDARD"
+      },
+      {
+        "Key": "AWSLogs/169271423270/CloudTrail/us-east-1/2020/01/12/262431843559_CloudTrail_us-east-1_20200112T0150Z_VGTpDFyY2OBJGrhO.json.gz",
+        "LastModified": "2020-01-12T01:55:24.000Z",
+        "ETag": "\"275f734cf592325a93252e96f4060787\"",
+        "Size": 3086,
+        "StorageClass": "STANDARD"
+      },
+      {
+        "Key": "AWSLogs/169271423270/CloudTrail/us-east-1/2020/01/12/262431843559_CloudTrail_us-east-1_20200112T0150Z_gI3Gw9MWyHyIIMGu.json.gz",
+        "LastModified": "2020-01-12T01:55:35.000Z",
+        "ETag": "\"b97a0423f74239be5b9fba3fbd3b9395\"",
+        "Size": 551,
+        "StorageClass": "STANDARD"
+      },
+      {
+        "Key": "AWSLogs/169271423270/CloudTrail/us-east-1/2020/01/12/262431843559_CloudTrail_us-east-1_20200112T0150Z_uKm2tJ1RWZHioXtr.json.gz",
+        "LastModified": "2020-01-12T01:56:08.000Z",
+        "ETag": "\"6fd529996ac6198eb900aac0af011659\"",
+        "Size": 554,
+        "StorageClass": "STANDARD"
+      },
+      {
+        "Key": "AWSLogs/169271423270/CloudTrail/us-east-1/2020/01/12/262431843559_CloudTrail_us-east-1_20200112T0150Z_yfZGubu3ho6lvxI1.json.gz",
+        "LastModified": "2020-01-12T01:55:46.000Z",
+        "ETag": "\"ee91965ab29b2fbe57b7403088ab0612\"",
+        "Size": 709,
+        "StorageClass": "STANDARD"
+      },
+      {
+        "Key": "AWSLogs/169271423270/CloudTrail/us-east-1/2020/01/12/262431843559_CloudTrail_us-east-1_20200112T0155Z_3C4gt6iCUvuNecO0.json.gz",
+        "LastModified": "2020-01-12T02:01:11.000Z",
+        "ETag": "\"2cbe3e61161e6c585715aafdde305509\"",
+        "Size": 525,
+        "StorageClass": "STANDARD"
+      },
+      {
+        "Key": "AWSLogs/169271423270/CloudTrail/us-east-1/2020/01/12/262431843559_CloudTrail_us-east-1_20200112T0155Z_sUzlvDPcMCg3So0K.json.gz",
+        "LastModified": "2020-01-12T02:01:56.000Z",
+        "ETag": "\"c07fdb44c47fc2150f0b1170c01f37b2\"",
+        "Size": 492,
+        "StorageClass": "STANDARD"
+      }
+    ],
+    "Name": "cloudtrail-sample-bucket",
+    "Prefix": "AWSLogs/169271423270/CloudTrail/us-east-1/2020/01/12/",
+    "Delimiter": "/",
+    "MaxKeys": 1000,
+    "CommonPrefixes": [],
+    "KeyCount": 10
+  }
+}

@@ -1,0 +1,64 @@
+<header class="header-1">
+  <div class="branding">
+    <a class="nav-link" routerLink="/">
+      <clr-icon shape="cloud"></clr-icon>
+      <span class="title">{{ title.getTitle() }}</span>
+    </a>
+  </div>
+  <div class="header-actions">
+    <clr-dropdown>
+      <button class="nav-icon" clrDropdownTrigger aria-label="toggle settings menu">
+        <clr-icon shape="user"></clr-icon>
+        <clr-icon shape="caret down"></clr-icon>
+      </button>
+      <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
+        <button clrDropdownItem *ngIf="pass()" (click)="pmodal = true">Change password</button>
+        <button clrDropdownItem (click)="logout()">Sign out</button>
+      </clr-dropdown-menu>
+    </clr-dropdown>
+  </div>
+</header>
+<!-- <nav class="subnav">
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active" routerLink="/s3">S3</a>
+    </li>
+  </ul>
+</nav> -->
+<clr-modal [(clrModalOpen)]="pmodal">
+  <h3 class="modal-title">Change password</h3>
+  <div class="modal-body">
+    <form clrForm clrLayout="horizontal" [clrLabelSize]="4">
+      <clr-password-container>
+        <label>Old password</label>
+        <input clrPassword name="oldPassword" [(ngModel)]="oldPassword" />
+      </clr-password-container>
+      <clr-password-container>
+        <label>New password</label>
+        <input clrPassword name="newPassword" [(ngModel)]="newPassword" />
+      </clr-password-container>
+      <clr-password-container>
+        <label>Confirm new password</label>
+        <input clrPassword name="confirmPassword" [(ngModel)]="confirmPassword" />
+      </clr-password-container>
+    </form>
+    <clr-alert *ngIf="msg" [clrAlertType]="'danger'" [clrAlertClosable]="false">
+      <clr-alert-item>
+        <span class="alert-text">
+          {{ msg }}
+        </span>
+      </clr-alert-item>
+    </clr-alert>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline btn-sm" (click)="close()">Cancel</button>
+    <button
+      type="button"
+      class="btn btn-primary btn-sm"
+      (click)="changePassword()"
+      [disabled]="!oldPassword || !newPassword || !confirmPassword"
+    >
+      Ok
+    </button>
+  </div>
+</clr-modal>

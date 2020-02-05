@@ -1,0 +1,53 @@
+<!-- <section class="sidenav-content">
+    <section class="nav-group collapsible">
+        <input id="tabexample1" type="checkbox">
+        <label for="tabexample1">Buckets</label>
+        <ul class="nav-list">
+            <li *ngFor="let b of buckets"><a class="nav-link" routerLinkActive="active"
+                    [routerLink]="['/s3',b]">{{ b }}</a></li>
+        </ul>
+    </section>
+</section> -->
+<clr-vertical-nav>
+  <clr-vertical-nav-group routerLinkActive="active" [clrVerticalNavGroupExpanded]="true">
+    <clr-icon shape="list" clrVerticalNavIcon></clr-icon>
+    Links
+    <clr-vertical-nav-group-children>
+      <a
+        [routerLink]="['/s3', b]"
+        routerLinkActive="active"
+        clrVerticalNavLink
+        [title]="disp(b)"
+        *ngFor="let b of buckets"
+      >
+        {{ disp(b) }}
+      </a>
+    </clr-vertical-nav-group-children>
+  </clr-vertical-nav-group>
+  <div class="nav-divider"></div>
+  <clr-vertical-nav-group [clrVerticalNavGroupExpanded]="false">
+    <clr-icon shape="cog" clrVerticalNavIcon></clr-icon>
+    Settings
+    <clr-vertical-nav-group-children>
+      <div class="add-container">
+        <p>Add Link</p>
+        <input clrInput placeholder="Bucket" name="bucket" [(ngModel)]="bucketa" />
+        <input clrInput placeholder="Prefix" name="prefix" [(ngModel)]="prefix" />
+        <input clrInput placeholder="Display" name="display" [(ngModel)]="display" />
+        <button class="btn btn-sm btn-icon btn-secondary" (click)="addBucket()" [disabled]="!bucketa">
+          <!-- <clr-icon shape="plus-circle"></clr-icon> -->
+          <clr-icon shape="plus"></clr-icon> add
+        </button>
+      </div>
+      <div class="remove-container">
+        <p>Remove Link</p>
+        <select clrSelect name="bucket" [(ngModel)]="bucketr">
+          <option [value]="b" *ngFor="let b of buckets">{{ b }}</option>
+        </select>
+        <button class="btn btn-sm btn-icon btn-secondary" (click)="removeBucket()" [disabled]="!bucketr">
+          <clr-icon shape="minus"></clr-icon> remove
+        </button>
+      </div>
+    </clr-vertical-nav-group-children>
+  </clr-vertical-nav-group>
+</clr-vertical-nav>

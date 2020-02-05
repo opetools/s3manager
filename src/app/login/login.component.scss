@@ -1,0 +1,19 @@
+.login-wrapper {
+  background: none;
+  justify-content: center;
+  .welcome {
+    margin: 0;
+  }
+  .login {
+    padding: 1.2rem 3rem;
+    padding-bottom: 6rem;
+    background: none;
+    .login-group {
+      padding: 1rem 0 0 0;
+    }
+  }
+  .login:before,
+  .login:after {
+    display: none;
+  }
+}

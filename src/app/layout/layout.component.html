@@ -1,0 +1,10 @@
+<clr-main-container>
+  <app-header></app-header>
+  <div class="content-container">
+    <router-outlet *ngIf="side" name="sidebar"></router-outlet>
+    <div class="content-area">
+      <app-alert></app-alert>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</clr-main-container>

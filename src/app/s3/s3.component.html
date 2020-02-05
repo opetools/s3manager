@@ -1,0 +1,76 @@
+<div *ngIf="bucket" class="breadcrumb">
+  <a [routerLink]="['/s3', param]">{{ display }}</a>
+  <span class="separator">/</span>
+  <ng-container *ngFor="let p of breadcrumb; index as i; let l = last">
+    <a *ngIf="!l" [routerLink]="p.link">{{ p.name }}</a>
+    <span *ngIf="l">{{ p.name }}</span>
+    <span class="separator">/</span>
+  </ng-container>
+</div>
+<div class="menu" *ngIf="bucket">
+  <button class="btn btn-sm btn-primary" (click)="dlSelected()" [disabled]="selected.length == 0">
+    <clr-icon shape="download"></clr-icon> download
+  </button>
+  <label class="btn btn-sm btn-primary btn-file">
+    <input type="file" #up (change)="upload(up.files)" accept="*" multiple />
+    <clr-icon shape="upload"></clr-icon> upload
+  </label>
+  <clr-input-container>
+    <input clrInput placeholder="folder name" name="folder" [(ngModel)]="folder" />
+  </clr-input-container>
+  <button class="btn btn-sm btn-primary" (click)="createFolder()" [disabled]="folder.length == 0">create</button>
+  <clr-signpost>
+    <button clrSignpostTrigger class="btn btn-sm btn-primary" [disabled]="selected.length == 0">
+      <clr-icon shape="trash"></clr-icon> delete
+    </button>
+    <ng-template [(clrIfOpen)]="isOpen">
+      <clr-signpost-content [clrPosition]="'bottom-middle'">
+        <p *ngFor="let s of selected">{{ basename(s.Key) }}</p>
+        <button class="btn btn-sm" (click)="delete()">OK</button>
+      </clr-signpost-content>
+    </ng-template>
+  </clr-signpost>
+
+  <clr-dropdown class="bottom-right">
+    <button class="btn btn-sm btn-link" clrDropdownTrigger>
+      CLEAR
+      <clr-icon shape="caret down"></clr-icon>
+    </button>
+    <clr-dropdown-menu clrPosition="bottom-right">
+      <div (click)="clearSort()" clrDropdownItem>SORT</div>
+      <div (click)="clearFilter()" clrDropdownItem>FILTER</div>
+    </clr-dropdown-menu>
+  </clr-dropdown>
+  <button type="button" class="btn btn-link btn-icon" (click)="refresh()" aria-label="refresh">
+    <clr-icon shape="refresh"></clr-icon>
+  </button>
+</div>
+<clr-datagrid *ngIf="bucket" [(clrDgSelected)]="selected" [clrDgLoading]="loading">
+  <clr-dg-placeholder>There are no objects under this path.</clr-dg-placeholder>
+  <clr-dg-column
+    *ngFor="let c of columns"
+    [clrDgField]="c.field"
+    [(clrDgSortOrder)]="c.sort"
+    [(clrFilterValue)]="c.filter"
+    [style.width.px]="c.width"
+    >{{ c.label }}</clr-dg-column
+  >
+
+  <clr-dg-row *clrDgItems="let c of contents" [clrDgItem]="c" [clrDgSelectable]="c.Key.slice(-1) != '/'">
+    <clr-dg-cell class="cell-name">
+      <a *ngIf="c.Key.slice(-1) == '/'" [routerLink]="['/s3', param, c.Key]"> <clr-icon shape="folder"></clr-icon>{{ dirname(c.Key) }} </a>
+      <a *ngIf="c.Key.slice(-1) != '/'" [routerLink]="" (click)="download(c.Key)">
+        <clr-icon shape="file"></clr-icon>{{ basename(c.Key) }}
+      </a>
+    </clr-dg-cell>
+    <clr-dg-cell>{{ filesize(c.Size) }}</clr-dg-cell>
+    <clr-dg-cell>{{ (c.LastModified | date: 'yyyy/MM/dd HH:mm:ss') || '--' }}</clr-dg-cell>
+    <!-- <clr-dg-cell>{{ c.StorageClass || '--' }}</clr-dg-cell> -->
+  </clr-dg-row>
+  <clr-dg-footer>
+    <clr-dg-pagination #pagination [clrDgPageSize]="10">
+      <clr-dg-page-size [clrPageSizeOptions]="[10, 20, 50, 100]">Files per page</clr-dg-page-size>
+      {{ pagination.firstItem + 1 }} - {{ pagination.lastItem + 1 }} of {{ pagination.totalItems }} files
+    </clr-dg-pagination>
+  </clr-dg-footer>
+</clr-datagrid>

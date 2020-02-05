@@ -1,0 +1,41 @@
+<div class="login-wrapper">
+  <form #loginForm="ngForm" class="login" (ngSubmit)="onSubmitLogin()">
+    <section class=" title">
+      <h3 class="welcome">{{ title.getTitle() }}</h3>
+    </section>
+    <div class="login-group">
+      <clr-select-container>
+        <label class="clr-sr-only">Auth</label>
+        <select clrSelect name="type" [(ngModel)]="form.type" required>
+          <option *ngFor="let l of logins; let i = index" [value]="i">{{ l.name }}</option>
+        </select>
+      </clr-select-container>
+      <clr-input-container>
+        <label class="clr-sr-only">Username</label>
+        <input
+          type="text"
+          name="username"
+          clrInput
+          [placeholder]="placeholders[form.type][0]"
+          [(ngModel)]="form.username"
+          required
+          [pattern]="patterns[form.type][0]"
+        />
+      </clr-input-container>
+      <clr-password-container>
+        <label class="clr-sr-only">Password</label>
+        <input
+          type="password"
+          name="password"
+          clrPassword
+          [placeholder]="placeholders[form.type][1]"
+          [(ngModel)]="form.password"
+          required
+          [pattern]="patterns[form.type][1]"
+        />
+      </clr-password-container>
+      <div [hidden]="!msg" class="error active">{{ msg }}</div>
+      <button type="submit" class="btn btn-primary" [disabled]="loginForm.form.invalid">NEXT</button>
+    </div>
+  </form>
+</div>

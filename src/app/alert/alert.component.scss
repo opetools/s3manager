@@ -1,0 +1,15 @@
+::ng-deep {
+  .close {
+    height: initial;
+  }
+  clr-alert:first-child {
+    .alert {
+      margin-top: 0;
+    }
+  }
+  clr-alert:last-child {
+    .alert {
+      margin-bottom: 0.4rem;
+    }
+  }
+}

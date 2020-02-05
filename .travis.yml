@@ -1,0 +1,32 @@
+dist: trusty
+sudo: false
+
+language: node_js
+node_js:
+  - "11"
+
+addons:
+  chrome: stable
+
+cache:
+  directories:
+    - ./node_modules
+
+install:
+  - npm install
+
+before_script:
+  - export NODE_OPTIONS=--max-old-space-size=8192
+
+script:
+  # - ng build --prod --baseHref=/s3manager/
+  - ng build --configuration=mock --baseHref=/s3manager/
+  - cp dist/s3manager/index.html dist/s3manager/404.html
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/s3manager
+  on:
+    branch: master

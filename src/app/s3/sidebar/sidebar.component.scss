@@ -1,0 +1,36 @@
+// ::ng-deep {
+//   .clr-control-label {
+//     display: none;
+//   }
+// }
+clr-vertical-nav {
+  height: 100%;
+  padding-top: 0;
+}
+form {
+  padding-left: 1rem;
+  select {
+    width: 100%;
+  }
+}
+
+.add-container,
+.remove-container {
+  p {
+    margin-top: 0.5rem;
+  }
+  padding: 0 0.6rem 0 2rem;
+  ::ng-deep {
+    clr-input-container,
+    clr-select-container {
+      margin: 0.5rem 0;
+    }
+    .clr-control-container {
+      width: 100%;
+    }
+  }
+  select,
+  input {
+    width: 100%;
+  }
+}
