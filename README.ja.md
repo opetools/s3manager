@@ -6,7 +6,11 @@ Angular 8 を使用した Amazon S3 ファイルブラウザ
 
 [English](./README.md) | 日本語
 
-## デモサイト
+## デモ
+
+Live demo: https://opetools.github.io/s3manager
+
+admin/password
 
 ## 特徴
 

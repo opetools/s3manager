@@ -6,7 +6,11 @@ Amazon S3 file browser with Angular 8
 
 English | [日本語](./README.ja.md)
 
-## Demo site
+## Demo
+
+Live demo: https://opetools.github.io/s3manager
+
+admin/password
 
 ## Features
 

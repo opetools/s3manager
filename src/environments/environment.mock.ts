@@ -43,7 +43,9 @@ AWS.S3.prototype.putObject = sinon.stub().returns({ promise: () => putObject });
 AWS.S3.prototype.deleteObjects = sinon.stub().returns({ promise: () => deleteObjects });
 AWS.S3.prototype.getSignedUrl = sinon.stub().returns('https://github.githubassets.com/images/modules/logos_page/Octocat.png');
 
-Auth.signIn = sinon.stub().returns(Promise.resolve(signIn));
+const si = sinon.stub();
+si.withArgs('admin', 'passowrd').returns(Promise.resolve(signIn));
+Auth.signIn = si;
 Auth.currentAuthenticatedUser = sinon.stub().returns(Promise.resolve(signIn));
 Auth.currentCredentials = sinon.stub().returns(Promise.resolve(currentCredentials));
 Auth.changePassword = sinon.stub().returns(Promise.resolve(changePassword));
